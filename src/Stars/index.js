@@ -6,7 +6,7 @@ import uuid from "react-uuid";
 export default function Stars({ count }) {
   let arr = [];
 
-  function myLoop() {
+  function countLoop() {
     while (count > 0) {
       arr.push("star");
       count--;
@@ -15,7 +15,7 @@ export default function Stars({ count }) {
 
   return (
     <div className="container">
-      {myLoop()}
+      {countLoop()}
       <ul className="row" style={{ display: "flex" }}>
         {arr.map((item) => (
           <li style={{ listStyle: "none" }} key={uuid()} className="col">
